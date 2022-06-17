@@ -1,0 +1,6 @@
+This software is intended to run as a Lambda function. This code will call the SumoLogic Obtain Dead Collectors REST call to obtain a list of dead collectors. A variable is contained within this code that allows you to specify the maxnumber of days that dead collectors will persist. Collectors that exceed that value are deleted via the use of the Delete Collector POST method. In addition to Lambda, an SES and SQS topic are required for this to run. 
+
+The following environment variables must be setup within your Lambda config: 
+
+ACCESS_ID : This is the Access ID that is created within SumoLogic when creating an API token
+ACCESS_KEY: This is the Access Key that is created within SumoLogic when creating an API token
